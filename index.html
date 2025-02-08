@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propose Day</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+        #box-button, #propose-button {
+            font-size: 18px;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #photo {
+            display: none;
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+        }
+        #message {
+            display: none;
+            background-color: white;
+            padding: 15px;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propose Day 💖</h1>
+    <button id="box-button">Open The Box 🎁</button>
+    <img id="photo" src="your-photo.jpg" alt="Our Photo">
+    <div id="message">
+        <p>My Love ❤️<br>From the moment we met, my heart knew you were the one.<br>Will you be mine forever?</p>
+        <button id="propose-button">Will You Marry Me? 💍</button>
+    </div>
+
+    <script>
+        document.getElementById("box-button").addEventListener("click", function() {
+            document.getElementById("box-button").style.display = "none";
+            document.getElementById("photo").style.display = "block";
+            document.getElementById("message").style.display = "block";
+        });
+
+        document.getElementById("propose-button").addEventListener("click", function() {
+            let response = confirm("Will You Marry Me? 💍");
+            if (response) {
+                alert("Yay! 💖 I love you!");
+            } else {
+                alert("Oh no! 💔");
+            }
+        });
+    </script>
+</body>
+</html>
