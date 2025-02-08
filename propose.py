@@ -19,7 +19,7 @@ root.configure(bg="pink")
 box_button = tk.Button(root, text="Open The Box 🎁", font=("Arial", 14), bg="red", fg="white", command=lambda: (box_button.pack(), open_box()))
 box_button.pack(pady=50)
 
-image = Image.open("photo.jpg")
+<img id="photo" src="your-photo.jpg.jpeg" alt="Our Photo">
 image = image.resize((150, 150), Image.LANCZOS)
 photo = ImageTk.PhotoImage(image)
 img_label = tk.Label(root, image=photo)
